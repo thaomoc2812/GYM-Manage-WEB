@@ -34,7 +34,7 @@
             <li><a href="../phanHoi.php?user=<?php echo $sdt?>">Phản hồi</a></li>
             <li class="active"><a href="viewThongTin.php?user=<?php echo $sdt?>">Thông tin cá nhân</a></li>
             <li>
-              <a style="text-align: right; background-color: red;color: white;margin-left: 1100px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html"  >Đăng xuất</a>
+              <a style="text-align: right; background-color: red;color: white;margin-left: 1100px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html"  >Đăng xuất</a>
             </li>
           </ul>
         </div>
