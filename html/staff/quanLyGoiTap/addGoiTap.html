@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width= device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      
+    </head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li ><a href="../home.html">Home</a></li>
+            <li><a href="../quanLyPhongTap.html">Quản lý phòng tập</a></li>
+            <li><a href="../quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
+            <li class="active"><a href="../quanLyGoiTap.html">Quản lý gói tập</a></li>
+            <li><a href="../quanLyHoiVien.html">Quản lý hội viên</a></li>
+            <li>
+              <a style="text-align: right; background-color: red;color: white;margin-left: 950px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../dangNhap.html"  >Đăng xuất</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+      
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="addGoiTap.html">Thêm gói tập</a></li>
+            <li><a href="../../../php/quanLyGoiTap/viewGoiTapStaff.php">Xem danh sách gói tập</a></li>
+            <li><a href="searchGoiTap.html">Tìm kiếm gói tập</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1>Form thêm gói tập</h1>
+        <form action="../../../php/quanLyGoiTap/addGoiTap.php" method="post">
+            <div class="form-group">
+                <label for="tengoitap">Tên gói tập</label>
+                <input type="text" id ="tengoitap" class="form-control" name="tengoitap">
+            </div>
+
+            <div class="form-group">
+                <label for="thoigian">Thời gian</label>
+                <input type="int" name="thoigian" id="thoigian" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="donvi">Đơn vị</label>
+                <input type="text" id="donvi" name="donvi" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="gia">Giá</label>
+              <input type="int"    id="gia" name="gia" class="form-control">
+          </div>
+
+
+      
+            <button type="submit" class="btn btn-primary">Thêm</button>
+
+        </form>
+    </div>
+
+
+</body>
+</html>
