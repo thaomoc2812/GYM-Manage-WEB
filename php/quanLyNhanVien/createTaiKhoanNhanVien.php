@@ -16,7 +16,7 @@ require_once '../connect.php';
 
 
 
-$search_sql = "SELECT * FROM taikhoan WHERE 
+$search_sql = "SELECT * FROM nhanvien WHERE 
 (sdt = '$sdt')
 ";
 
@@ -30,17 +30,20 @@ while ($r = mysqli_fetch_assoc($result))
     $key = $r['sdt'] ;
     if  ($sdt == $key)
     {
-        echo "<h1>Số điện thoại này đã tồn tại</h1>";
         $q++;
-        break;
     }
 
 
 };
 
-if($q==0)
+if($q == 0)
 {
-    $addsql = "INSERT INTO taikhoan(sdt,matkhau) VALUES ('$sdt','$matkhau')";
+    echo "<h1>Chưa có nhân viên này trong danh sách</h1>";
+}
+
+else
+{
+    $addsql = "UPDATE nhanvien SET matkhau = '$matkhau' WHERE sdt = $sdt";
     if( mysqli_query($conn, $addsql)){
     
         echo "<h1>Tạo tài khoản thành công</h1>";
