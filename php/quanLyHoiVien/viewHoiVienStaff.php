@@ -17,10 +17,10 @@
         <div class="container-fluid">
           <ul class="nav navbar-nav">
             <li ><a href="../home.html">Home</a></li>
-            <li><a href="../../html/admin/quanLyPhongTap.html">Quản lý phòng tập</a></li>
-            <li><a href="../../html/admin/quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
-            <li><a href="../../html/admin/quanLyGoiTap.html">Quản lý gói tập</a></li>
-            <li  class="active"><a href="../../html/admin/quanLyHoiVien.html">Quản lý hội viên</a></li>
+            <li><a href="../../html/staff/quanLyPhongTap.html">Quản lý phòng tập</a></li>
+            <li><a href="../../html/staff/quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
+            <li><a href="../../html/staff/quanLyGoiTap.html">Quản lý gói tập</a></li>
+            <li  class="active"><a href="../../html/staff/quanLyHoiVien.html">Quản lý hội viên</a></li>
             <li>
               <a style="text-align: right; background-color: red;color: white;margin-left: 800px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html"  >Đăng xuất</a>
             </li>
@@ -32,7 +32,7 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li><a href="../../html/admin/quanLyHoiVien/addHoiVien.html">Thêm hội viên</a></li>
+            <li><a href="../../html/staff/quanLyHoiVien/addHoiVien.html">Thêm hội viên</a></li>
             <li class="active"><a href="viewHoiVienStaff.php">Xem danh sách hội viên </a></li>
             <li  ><a href="../../html/staff/quanLyHoiVien/searchHoiVien.html">Tìm kiếm hội viên</a></li>
             <li><a href="viewDangKyStaff.php">Duyệt đăng ký gói tập</a></li>
