@@ -92,7 +92,7 @@
                             <td><?php echo $r3['gia'] ?></td>
                             <td><?php echo $r1['trangthai'] ?></td>
                             <td><a href="editDangKyStaff.php?sid=<?php echo $r1['id'] ?>" class="btn btn-info">OK</a>
-                             <a onclick="return confirm('Bạn có muốn xóa đăng ký này không?')" href="deleteDangKy.php?sid=<?php echo $r1['id'] ?>" class="btn btn-danger">Xóa</a></td>
+                             <a onclick="return confirm('Bạn có muốn xóa đăng ký này không?')" href="deleteDangKyStaff.php?sid=<?php echo $r1['id'] ?>" class="btn btn-danger">Xóa</a></td>
                         </tr>
                         <?php
                         }
