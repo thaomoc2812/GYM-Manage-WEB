@@ -11,6 +11,11 @@ $tinhtrang= $_POST['tinhtrang'];
 //ket noi csdl
 require_once '../connect.php';
 
+if (!$maso || !$tenthietbi || !$soluong|| !$ngaynhapve|| !$ngaybaohanh|| !$xuatsu|| !$tinhtrang )
+    {
+        echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 
 
 $addsql = "INSERT INTO trangthietbi
