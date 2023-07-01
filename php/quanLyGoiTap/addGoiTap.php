@@ -9,6 +9,11 @@ $gia= $_POST['gia'];
 //ket noi csdl
 require_once '../connect.php';
 
+if (!$tengoitap || !$thoigian || !$donvi || !$gia )
+    {
+        echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 
 
 $addsql = "INSERT INTO goitap
