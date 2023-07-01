@@ -4,6 +4,11 @@ require_once '../../connect.php';
 $sdt = $_GET['user'];
 
 $noidung = $_POST['noidung'];
+if (!$noidung )
+    {
+        echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 
 $search_khach = "SELECT * FROM hoivien WHERE (sdt = '$sdt')";
 
