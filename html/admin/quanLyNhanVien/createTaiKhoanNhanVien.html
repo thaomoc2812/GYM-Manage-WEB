@@ -45,6 +45,7 @@
       <div class="container">
         <h1>Tạo tài khoản nhân viên</h1>
         <form action="../../../php/quanLyNhanVien/createTaiKhoanNhanVien.php" method="post">
+          
             <div class="form-group">
                 <label for="sdt">Số điện thoại</label>
                 <input type="text" id ="sdt" class="form-control" name="sdt">
@@ -55,6 +56,21 @@
               <label for="matkhau">Mật khẩu</label>
               <input type="text" id="matkhau" name="matkhau" class="form-control">
           </div>
+
+          <div class="form-group">
+            <label for="ten">Họ tên</label>
+            <input type="text" id ="ten" class="form-control" name="ten">
+        </div>
+
+        <div class="form-group">
+            <label for="diachi">Địa chỉ</label>
+            <input type="text" name="diachi" id="diachi" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="vitri">Vị trí</label>
+          <input type="text" id="vitri" name="vitri" class="form-control">
+      </div>
 
             <button type="submit" class="btn btn-primary">Tạo</button>
 
