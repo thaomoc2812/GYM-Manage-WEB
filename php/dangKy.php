@@ -6,6 +6,16 @@ $matkhau = $_POST['matkhau'];
 
 //ket noi csdl
 require_once 'connect.php';
+if (!$sdt || !$matkhau )
+    {
+        echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
+
+    if (!preg_match("/^[0-9]{10}$/", $sdt)) {
+        echo "Số điện thoại không hợp lệ. Vui lòng nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 
 $search_khach = "SELECT * FROM hoivien WHERE (sdt = '$sdt')";
 
