@@ -1,6 +1,5 @@
 <?php
 
-
 //nhan du lieu tu form
 $sdt = $_POST['sdt'];
 $matkhau = $_POST['matkhau'];

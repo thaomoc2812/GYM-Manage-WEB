@@ -17,24 +17,24 @@ if (!$maso || !$tenthietbi || !$soluong|| !$ngaynhapve|| !$ngaybaohanh|| !$xuats
         exit;
     }
 
-$search = "SELECT * FROM trangthietbi WHERE (maso = '$maso') ";
+    $search = "SELECT * FROM trangthietbi WHERE (maso = '$maso') ";
 
-$query = mysqli_query($conn, $search);
-$q=0;
-while ($r0 = mysqli_fetch_assoc($query))
-{
-    if($r0['tenthietbi'] != $tenthietbi)
+    $query = mysqli_query($conn, $search);
+    $q=0;
+    while ($r0 = mysqli_fetch_assoc($query))
     {
-        $q = 1;
+        if($r0['tenthietbi'] != $tenthietbi)
+        {
+            $q = 1;
+        }
+        
+    };
+    if($q == 1)
+    {
+        echo "Mã số thiêt bị đã tồn tại <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
     }
     
-};
-if($q == 1)
-{
-    echo "Mã số thiêt bị đã tồn tại <a href='javascript: history.go(-1)'>Trở lại</a>";
-    exit;
-}
-
 $addsql = "INSERT INTO trangthietbi
 (maso,tenthietbi,soluong,ngaynhapve,ngaybaohanh,xuatsu,tinhtrang) VALUES ('$maso','$tenthietbi',$soluong, '$ngaynhapve','$ngaybaohanh','$xuatsu','$tinhtrang')";
 

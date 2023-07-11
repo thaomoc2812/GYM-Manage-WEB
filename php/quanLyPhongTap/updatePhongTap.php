@@ -27,7 +27,6 @@ if($q == 1)
     exit;
 }
 
-
 $update_sql = "UPDATE phongtap SET maphong = '$mp', tenphong = '$tp', soluong = $sl WHERE id = $id";
 
 

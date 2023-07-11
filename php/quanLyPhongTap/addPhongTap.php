@@ -30,7 +30,7 @@ if (!$mp || !$tp || !$sl )
         echo "Mã phòng đã tồn tại <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
-
+    
 $addsql = "INSERT INTO phongtap
 (maphong,tenphong,soluong) VALUES ('$mp','$tp',$sl)";
 
