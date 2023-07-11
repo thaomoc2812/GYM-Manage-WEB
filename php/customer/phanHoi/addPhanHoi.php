@@ -10,10 +10,10 @@ $sdt = $_GET['user'];
   <meta name="viewport" content="width= device-width,initial-scale=1.0">
   <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../../../css/style.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@ $sdt = $_GET['user'];
             <a class="nav-link text-warning" href="../thongTinCaNhan/viewThongTin.php?user=<?php echo $sdt ?>">Thông tin cá nhân</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html">Đăng xuất</a>
+            <a class="nav-link text-warning logout-btn" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html">Đăng xuất</a>
           </li>
         </ul>
       </div>
@@ -58,17 +58,24 @@ $sdt = $_GET['user'];
   </div>
 
 
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-choice">
         <li class="active"><a href="addPhanHoi.php?user=<?php echo $sdt ?>">Viết phản hồi</a></li>
         <li><a href="viewPhanHoi.php?user=<?php echo $sdt ?>">Xem phản hồi</a></li>
 
       </ul>
     </div>
-  </nav>
+  </nav> -->
 
-  <div class="container">
+  <body>
+    <div class="list-group">
+      <a href="addPhanHoi.php?user=<?php echo $sdt ?>" class="list-group-item active">Viết phản hồi</a>
+      <a href="viewPhanHoi.php?user=<?php echo $sdt ?>" class="list-group-item">Xem phản hồi</a>
+    </div>
+  </body>
+
+  <div class="container-body">
     <h1>Viết phản hồi</h1>
     <form action="add.php?user=<?php echo $sdt ?>" method="post">
 

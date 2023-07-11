@@ -20,6 +20,7 @@
             <li><a href="../../html/admin/quanLyPhongTap.html">Quản lý phòng tập</a></li>
             <li><a href="../../html/admin/quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
             <li class="active"><a href="../../html/admin/quanLyGoiTap.html">Quản lý gói tập</a></li>
+            <li><a href="../../html/admin/quanLyHoiVien.html">Quản lý hội viên</a></li>
             <li><a href="../../html/admin/xemBaoCaoThongKe.html">Xem báo cáo thông kê</a></li>
             <li>
               <a style="text-align: right; background-color: red;color: white;margin-left: 600px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html"  >Đăng xuất</a>

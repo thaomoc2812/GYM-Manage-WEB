@@ -828,6 +828,41 @@ font-family: 'Teko', sans-serif;
   padding-bottom: 15px;
 }
 
+.navbar-choice {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 10px 0;
+}
+
+.list-group-item:hover {
+  background-color: #dbdada;
+}
+
+.active {
+  text-decoration: underline solid transparent;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.active-main {
+  text-decoration: underline solid #ffc107;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: rgba(102, 101, 101, 0.7);
+  border-radius: 5px;
+}
+
+.container-body {
+  margin: 100px 200px;
+}
+
+.logout-btn:hover {
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
 /* 
     ***************************************************************************************
 

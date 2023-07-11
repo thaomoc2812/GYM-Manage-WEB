@@ -25,10 +25,10 @@ $result = mysqli_query($conn, $view_sql);
   <meta name="viewport" content="width= device-width,initial-scale=1.0">
   <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../../../css/style.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <body>
@@ -59,15 +59,23 @@ $result = mysqli_query($conn, $view_sql);
             <a class="nav-link text-warning" href="../thongTinCaNhan/viewThongTin.php?user=<?php echo $sdt ?>">Thông tin cá nhân</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html">Đăng xuất</a>
+            <a class="nav-link text-warning logout-btn" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html">Đăng xuất</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <div class="body-home">
+    <div class="topic">
+      “Strength does not come <br> from physical capacity. <br> It comes from an indomitable will.”
+    </div>
+    <div class="person">
+      -Mahatma Gandhi
+    </div>
+  </div>
 
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li><a href="addPhanHoi.php?user=<?php echo $sdt ?>">Viết phản hồi</a></li>
@@ -75,9 +83,16 @@ $result = mysqli_query($conn, $view_sql);
 
       </ul>
     </div>
-  </nav>
+  </nav> -->
 
-  <div class="container">
+  <body>
+    <div class="list-group">
+      <a href="addPhanHoi.php?user=<?php echo $sdt ?>" class="list-group-item">Viết phản hồi</a>
+      <a href="viewPhanHoi.php?user=<?php echo $sdt ?>" class="list-group-item active">Xem phản hồi</a>
+    </div>
+  </body>
+
+  <div class="container-body">
     <table class="table table-striped">
       <thead class="thead-style">
         <tr>

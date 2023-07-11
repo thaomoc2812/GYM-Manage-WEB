@@ -20,10 +20,10 @@ $row = mysqli_fetch_assoc($result);
   <meta name="viewport" content="width= device-width,initial-scale=1.0">
   <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../../../css/style.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <body>
@@ -39,24 +39,25 @@ $row = mysqli_fetch_assoc($result);
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-warning" href="../home.php?user=<?php echo $sdt ?>">Home</a>
+            <a class="nav-link text-warning" href="home.php?user=<?php echo $sdt ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" href="../goiTap.php?user=<?php echo $sdt ?>">Gói tập</a>
+            <a class="nav-link text-warning" href="goiTap.php?user=<?php echo $sdt ?>">Gói tập</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" href="../phanHoi.php?user=<?php echo $sdt ?>">Phản hồi</a>
+            <a class="nav-link text-warning" href="phanHoi.php?user=<?php echo $sdt ?>">Phản hồi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" href="../thongTinCaNhan/viewThongTin.php?user=<?php echo $sdt ?>">Thông tin cá nhân</a>
+            <a class="nav-link text-warning" href="thongTinCaNhan/viewThongTin.php?user=<?php echo $sdt ?>">Thông tin cá nhân</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html">Đăng xuất</a>
+            <a class="nav-link text-warning logout-btn" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../../html/dangNhap.html">Đăng xuất</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <div class="body-home">
     <div class="topic">
       “Strength does not come <br> from physical capacity. <br> It comes from an indomitable will.”
@@ -66,7 +67,7 @@ $row = mysqli_fetch_assoc($result);
     </div>
   </div>
 
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li class="active"><a href="viewGoiTap.php?user=<?php echo $sdt ?>">Xem danh sách các gói tập</a></li>
@@ -75,12 +76,22 @@ $row = mysqli_fetch_assoc($result);
 
       </ul>
     </div>
-  </nav>
-  <div class="container">
+  </nav> -->
+
+  <body>
+    <div class="list-group">
+      <a href="viewGoiTap.php?user=<?php echo $sdt ?>" class="list-group-item active">Xem danh sách các gói tập</a>
+      <a href="searchGoiTap.php?user=<?php echo $sdt ?>" class="list-group-item ">Tìm kiếm gói tập</a>
+      <a href="viewCacGoiTapDaDangKy.php?user=<?php echo $sdt ?>" class="list-group-item">Các gói tập đã đăng ký</a>
+    </div>
+  </body>
+
+
+  <div class="container-body">
     <h1>Đăng ký gói tập</h1>
     <form action="addDangKyGoiTap.php?sid=<?php echo $id ?>&user=<?php echo $sdt ?>" method="post">
       <div class="form-group">
-        <label for="ngaybatdau">Tên gói tập</label>
+        <label for="tengoitap">Tên gói tập</label>
         <p><?php echo $row['tengoitap'] ?></p>
       </div>
 
@@ -95,7 +106,7 @@ $row = mysqli_fetch_assoc($result);
       </div>
 
       <div class="form-group">
-        <label for="thoigian">Giá</label>
+        <label for="gia">Giá</label>
         <p><?php echo $row['gia'] ?><?php echo " VND" ?></p>
       </div>
 
@@ -104,6 +115,23 @@ $row = mysqli_fetch_assoc($result);
 
     </form>
   </div>
+  <?php
+  include("../../../layouts/footer_home.php");
+  ?>
+
+
+</body>
+<style>
+    .header {
+      position: fixed;
+    }
+
+    .thead-style {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
   <?php
   include("../../../layouts/footer_home.php");
   ?>

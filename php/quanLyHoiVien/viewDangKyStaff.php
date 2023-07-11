@@ -23,7 +23,7 @@
             <li><a href="../../html/staff/quanLyGoiTap.html">Quản lý gói tập</a></li>
             <li  class="active"><a href="../../html/staff/quanLyHoiVien.html">Quản lý hội viên</a></li>
             <li>
-              <a style="text-align: right; background-color: red;color: white;margin-left: 800px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html"  >Đăng xuất</a>
+              <a style="text-align: right; background-color: red;color: white;margin-left: 950px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html"  >Đăng xuất</a>
             </li>
           </ul>
         </div>

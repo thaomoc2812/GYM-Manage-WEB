@@ -6,10 +6,10 @@
   <meta name="viewport" content="width= device-width,initial-scale=1.0">
   <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../../css/style.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         <div class="mx-auto"></div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-warning" href="home.php?user=<?php echo $sdt ?>">Home</a>
+            <a class="nav-link text-warning active-main" href="home.php?user=<?php echo $sdt ?>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-warning" href="goiTap.php?user=<?php echo $sdt ?>">Gói tập</a>
@@ -39,7 +39,7 @@
             <a class="nav-link text-warning" href="thongTinCaNhan/viewThongTin.php?user=<?php echo $sdt ?>">Thông tin cá nhân</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html">Đăng xuất</a>
+            <a class="nav-link text-warning logout-btn" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html">Đăng xuất</a>
           </li>
         </ul>
       </div>

@@ -16,7 +16,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li ><a href="../home.html">Home</a></li>
+            <li ><a href="../../html/admin/home.html">Home</a></li>
             <li><a href="../../html/admin/quanLyNhanVien.html">Quản lý nhân viên</a></li>
             <li><a href="../../html/admin/quanLyPhongTap.html">Quản lý phòng tập</a></li>
             <li><a href="../../html/admin/quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>

@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width= device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width= device-width,initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-</head>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+    </head>
 <body>
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li><a href="../html/admin/home.html">Home</a></li>
-                <li><a href="../html/admin/quanLyNhanVien.html">Quản lý nhân viên</a></li>
-                <li><a href="../html/admin/quanLyPhongTap.html">Quản lý phòng tập</a></li>
-                <li><a href="../html/admin/quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
-                <li><a href="../html/admin/quanLyGoiTap.html">Quản lý gói tập</a></li>
-                <li><a href="../html/admin/quanLyHoiVien.html">Quản lý hội viên</a></li>
-                <li class="active"><a href="../html/admin/xemBaoCaoThongKe.html">Xem báo cáo thông kê</a></li>
-                <li>
-                    <a style="text-align: right; background-color: red;color: white;margin-left: 600px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../html/dangNhap.html">Đăng xuất</a>
-                </li>
-            </ul>
+          <ul class="nav navbar-nav">
+            <li ><a href="../../html/admin/home.html">Home</a></li>
+            <li><a href="../../html/admin/quanLyNhanVien.html">Quản lý nhân viên</a></li>
+            <li><a href="../../html/admin/quanLyPhongTap.html">Quản lý phòng tập</a></li>
+            <li><a href="../../html/admin/quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
+            <li><a href="../../html/admin/quanLyGoiTap.html">Quản lý gói tập</a></li>
+            <li><a href="../../html/admin/quanLyHoiVien.html">Quản lý hội viên</a></li>
+            <li class="active"><a href="../../html/admin/xemBaoCaoThongKe.html">Xem báo cáo thông kê</a></li>
+            <li>
+              <a style="text-align: right; background-color: red;color: white;margin-left: 600px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../html/dangNhap.html"  >Đăng xuất</a>
+            </li>
+          </ul>
         </div>
-    </nav>
-
-
-
-
+      </nav>
+    
     <div class="container">
         <h1>Báo cáo </h1>
         <table class="table table-striped">
@@ -116,9 +110,8 @@
                     $nam = $row['nam'];
 
                     // Tính tổng tiền cho tháng và năm hiện tại
-                    $query_tongtien = "SELECT SUM(goitap.gia) AS tongtien
+                    $query_tongtien = "SELECT SUM(dangkygoitap.gia) AS tongtien
                                FROM dangkygoitap
-                               INNER JOIN goitap ON dangkygoitap.idgoitap = goitap.id
                                WHERE MONTH(ngaybatdau) = $thang AND YEAR(ngaybatdau) = $nam AND trangthai = 'Đã xác nhận'";
                     $result_tongtien = mysqli_query($conn, $query_tongtien);
                     $row_tongtien = mysqli_fetch_assoc($result_tongtien);
