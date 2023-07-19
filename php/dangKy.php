@@ -2,10 +2,12 @@
 //nhan du lieu tu form
 $sdt = $_POST['sdt'];
 $matkhau = $_POST['matkhau'];
+$confirm = $_POST['confirm'];
 
 
 //ket noi csdl
 require_once 'connect.php';
+
 if (!$sdt || !$matkhau )
     {
         echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
@@ -17,6 +19,12 @@ if (!$sdt || !$matkhau )
         exit;
     }
 
+
+    if ($confirm != $matkhau )
+    {
+        echo "Xác nhận mật khẩu chưa khớp. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 $search_khach = "SELECT * FROM hoivien WHERE (sdt = '$sdt')";
 
 $query = mysqli_query($conn, $search_khach);
@@ -41,6 +49,3 @@ if($q==0)
     
     };
 }
-
-
-?>

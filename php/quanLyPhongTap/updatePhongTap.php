@@ -15,9 +15,9 @@ $query = mysqli_query($conn, $search);
 $q=0;
 while ($r0 = mysqli_fetch_assoc($query))
 {
-    if($r0['tenphong'] != $tp)
+    if($r0['tenphong'] != $tp && $r0['id'] != $id)
     {
-        $q = 1;
+        $q =1;
     }
     
 };

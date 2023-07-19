@@ -1,90 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name ="viewport" content="width= device-width,initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= device-width,initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1147679ae7.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-      
-    </head>
-<body>
+    <script src="../../../js/script_admin.js"></script>
+    <link rel="stylesheet" href="../../../css/dashMain.css" />
+    <link rel="stylesheet" href="../../../css/style2.css" />
+    <link rel="stylesheet" href="../../../css/entypo.css" />
+  </head>
+  <body class="page-body  page-fade" onload="collapseSidebar()">
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <ul class="nav navbar-nav">
-            <li ><a href="../home.html">Home</a></li>
+    <div class="page-container sidebar-collapsed" id="navbarcollapse">
 
-            <li><a href="../quanLyPhongTap.html">Quản lý phòng tập</a></li>
-            <li class="active"><a href="../quanLyTrangThietBi.html">Quản lý trang thiết bị</a></li>
-            <li><a href="../quanLyGoiTap.html">Quản lý gói tập</a></li>
-            <li><a href="../quanLyHoiVien.html">Quản lý hội viên</a></li>
-            <li>
-              <a style="text-align: right; background-color: red;color: white;margin-left: 920px;" onclick="return confirm('Bạn có muốn đăng xuất không?')" href="../../dangNhap.html"  >Đăng xuất</a>
-            </li>
-          </ul>
+        <div class="sidebar-menu">
+
+            <header class="logo-env">
+
+                <!-- logo -->
+
+
+                <!-- logo collapse icon -->
+                <div class="sidebar-collapse" onclick="collapseSidebar()">
+                    <a href="#" class="sidebar-collapse-icon with-animation"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+                        <i class="entypo-menu"></i>
+                    </a>
+                </div>
+            </header>
+            <ul id="main-menu" class="">
+
+                <li id="dash"><a href="../../admin/home.php"><i class="entypo-gauge"></i><span>Home</span></a></li>
+
+                <!-- <li id="regis"><a href="new_entry.php"><i class="entypo-user-add"></i><span>New Registration</span></a> -->
+
+                <!-- <li id="paymnt"><a href="payments.php"><i class="entypo-star"></i><span>Payments</span></a></li> -->
+
+                <!-- <li id="health_status"><a href="new_health_status.php"><i class="entypo-user-add"></i><span>Health Status</span></a> -->
+
+                <li class="" id="roomhassubopen"><a href="#" onclick="memberExpand(2)"><i class="entypo-quote"></i><span>Quản lý phòng tập</span></a>
+
+                    <ul id="roomExpand">
+                        <li class="active">
+                            <a href="../../../html/staff/quanLyPhongTap/addPhongTap.html"><span>Thêm phòng tập</span></a>
+                        </li>
+
+                        <li><a href="../../../php/quanLyPhongTap/viewPhongTapStaff.php"><span>Xem danh sách phòng tập</span></a></li>
+                        <li><a href="../../../html/staff/quanLyPhongTap/searchPhongTap.html"><span>Tìm kiếm phòng tập</span></a></li>
+
+                    </ul>
+
+                <li class="" id="devicehassubopen"><a href="#" onclick="memberExpand(3)"><i class="entypo-box"></i><span>Quản lý trang thiết bị</span></a>
+
+                    <ul id="deviceExpand">
+                        <li class="active">
+                            <a href="../../../html/staff/quanLyTrangThietBi/addTrangThietBi.html"><span>Thêm trang thiết bị</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../php/quanLyTrangThietBi/viewTrangThietBiStaff.php"><span>Xem danh sách trang thiết bị</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../html/staff/quanLyTrangThietBi/searchTrangThietBi.html"><span>Tìm kiếm trang thiết bị</span></a>
+                        </li>
+
+                    </ul>
+
+                <li class="" id="packagehassubopen"><a href="#" onclick="memberExpand(4)"><i class="entypo-alert"></i><span>Quản lý gói tập</span></a>
+
+                    <ul id="packageExpand">
+                        <li class="active">
+                            <a href="../../../html/staff/quanLyGoiTap/addGoiTap.html"><span>Thêm gói tập</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../php/quanLyGoiTap/viewGoiTapStaff.php"><span>Xem danh sách gói tập</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../html/staff/quanLyGoiTap/searchGoiTap.html"><span>Tìm kiếm gói tập</span></a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="" id="memberhassubopen"><a href="#" onclick="memberExpand(5)"><i class="entypo-star"></i><span>Quản lý hội viên</span></a>
+
+                    <ul id="memExpand">
+                        <li class="active">
+                            <a href="../../../html/staff/quanLyHoiVien/addHoiVien.html"><span>Thêm hội viên</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../php/quanLyHoiVien/viewHoiVienStaff.php"><span>Xem danh sách hội viên</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../html/staff/quanLyHoiVien/searchHoiVien.html"><span>Tìm kiếm hội viên</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../../../php/quanLyHoiVien/viewDangKyStaff.php"><span>Duyệt đăng ký gói tập</span></a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- <li id="adminprofile"><a href="more-userprofile.php"><i class="entypo-folder"></i><span>Xem báo báo thống kê</span></a></li> -->
+
+                <li><a href="../../../html/dangNhap.html"><i class="entypo-logout"></i><span>Đăng xuất</span></a></li>
+
+            </ul>
         </div>
-      </nav>
-    
-      
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="addTrangThietBi.html">Thêm trang thiết bị</a></li>
-            <li><a href="../../../php/quanLyTrangThietBi/viewTrangThietBiStaff.php">Xem danh sách trang thiết bị</a></li>
-            <li><a href="searchTrangThietBi.html">Tìm kiếm trang thiết bị</a></li>
-          </ul>
-        </div>
-      </nav>
 
-      <div class="container">
-        <h1>Form thêm trang thiết bị</h1>
-        <form action="../../../php/quanLyTrangThietBi/addTrangThietBi.php" method="post">
-            <div class="form-group">
-                <label for="maphong">Mã số</label>
-                <input type="text" id ="maso" class="form-control" name="maso">
+        <div class="main-content">
+
+            <div class="row">
+
+                <!-- Profile Info and Notifications -->
+                <div class="col-md-6 col-sm-8 clearfix">
+
+                </div>
+
+
+                <!-- Raw Links -->
+                <div class="col-md-6 col-sm-4 clearfix hidden-xs">
+
+                    <ul class="list-inline links-list pull-right">
+
+                        <!-- <li>Welcome <?php echo $_SESSION['full_name']; ?>
+                        </li> -->
+
+                        <li>
+                            <a href="logout.php">
+                                Log Out <i class="entypo-logout right"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
 
-            <div class="form-group">
-                <label for="tenphong">Tên thiết bị</label>
-                <input type="text" name="tenthietbi" id="tenthietbi" class="form-control">
-            </div>
 
-            <div class="form-group">
-                <label for="soluong">Số lượng</label>
-                <input type="int" id="soluong" name="soluong" class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="ngaynhapve">Ngày nhập về</label>
-              <input type="date"    id="ngaynhapve" name="ngaynhapve" class="form-control">
-          </div>
+            <hr>
 
-
-          <div class="form-group">
-            <label for="ngaybaohanh">Ngày bảo hành</label>
-            <input type="date" id="ngaybaohanh" name="ngaybaohanh" class="form-control" >
+        </div>
+         
+    <div class="container">
+      <h1>Form thêm trang thiết bị</h1>
+      <form
+        action="../../../php/quanLyTrangThietBi/addTrangThietBi.php"
+        method="post"
+      >
+        <div class="form-group">
+          <label for="maso">Mã số</label>
+          <input type="text" id="maso" class="form-control" name="maso" />
         </div>
 
+        <div class="form-group">
+          <label for="tenthietbi">Tên thiết bị</label>
+          <input
+            type="text"
+            name="tenthietbi"
+            id="tenthietbi"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="soluong">Số lượng</label>
+          <input type="int" id="soluong" name="soluong" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="ngaynhapve">Ngày nhập về</label>
+          <input
+            type="date"
+            id="ngaynhapve"
+            name="ngaynhapve"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="ngaybaohanh">Ngày bảo hành</label>
+          <input
+            type="date"
+            id="ngaybaohanh"
+            name="ngaybaohanh"
+            class="form-control"
+          />
+        </div>
 
         <div class="form-group">
           <label for="xuatsu">Xuất sứ</label>
-          <input type="text" id="xuatsu" name="xuatsu" class="form-control">
-      </div>
+          <input type="text" id="xuatsu" name="xuatsu" class="form-control" />
+        </div>
 
-      <div class="form-group">
-        <label for="tinhtrang">Tình trạng</label>
-        <input type="text" id="tinhtrang" name="tinhtrang" class="form-control">
+        <div class="form-group">
+          <label for="tinhtrang">Tình trạng</label>
+          <input
+            type="text"
+            id="tinhtrang"
+            name="tinhtrang"
+            class="form-control"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+      </form>
     </div>
-            <button type="submit" class="btn btn-primary">Thêm</button>
-
-        </form>
-    </div>
-
-
-</body>
+  </body>
 </html>
-   
